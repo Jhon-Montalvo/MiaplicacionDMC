@@ -1,6 +1,5 @@
 import streamlit as st
-import numpy as np
-import libreria_funciones as lf
+import libreria_funciones.py as lf
 
 st.title("Mi primera app")
 
@@ -14,5 +13,6 @@ t=st.number_input("Ingrese la tasa anual")
 a=st.slider("Seleccione el numero de años de prestamo",min_value=1, max_value=5)
 pa=st.number_input("Cantindad de pago por año")
 
-cota=lf.cuota_prestamo(p,t,a,pa)*2
+cota=lf.cuota_prestamo(p,t,a,pa)
+
 st.write(cota)
